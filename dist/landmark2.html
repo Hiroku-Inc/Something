@@ -1,0 +1,261 @@
+<!doctype html>
+<html class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/dist/output.css" rel="stylesheet">
+    <link href="/dist/other.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Bulgaria - Explore & Adventure</title>
+    <style>
+      body {
+        font-family: 'Poppins', serif;
+      }
+
+      /* Custom styles for navbar animation */
+      .nav-container {
+        transition: transform 0.3s ease-in-out;
+        transform: translateY(-100%);
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        z-index: 10;
+      }
+
+      .nav-container.open {
+        transform: translateY(0);
+      }
+      .carousel-container {
+            overflow: hidden;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-item {
+            min-width: 100%;
+            flex: 0 0 auto;
+        }
+    </style>
+  </head>
+  <body class="bg-[#121212] text-white ">
+   
+    <nav
+    class="z-10 fixed top-0 flex-no-wrap flex w-full items-center justify-between bg-transparent py-2 shadow-mdlg:flex-wrap lg:justify-start lg:py-4">
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+       <!-- Hamburger button for mobile view -->
+       <button
+          class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Hamburger icon -->
+          <span class="[&>svg]:w-7">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                <path fill-rule="evenodd"
+                   d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                   clip-rule="evenodd" />
+             </svg>
+          </span>
+       </button>
+       <!-- Collapsible navigation container -->
+       <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContent1" data-te-collapse-item>
+          <!-- Logo -->
+          <a class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+             href="#">
+             <div class="pl-8 pt-8 w-1/2 font-bold uppercase">
+                <img alt="Hello" class="object-cover h-full w-full" src="https://media.discordapp.net/attachments/1180539305693810698/1198404568812376064/image.png?ex=65bec83a&is=65ac533a&hm=885d95b294a0848a8e5d3ffe4fe8d4587763eaa8dc08f88fe6e0f6befc6a99f8&=&format=webp&quality=lossless" />
+             </div>
+          </a>
+
+       </div>
+       <!-- Right elements -->
+       <div class="relative flex items-center">
+
+          <a class="mr-4 text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+             href="#">
+             <div class="object-right-top ml-auto float-right" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+             </div>
+          </a>
+
+        
+       </div>
+    </div>
+ </nav>
+ <div class="z-10 fixed nav-container top-0 bg-[#121212]" id="navbar">
+  <div class="flex flex-col items-start justify-start space-y-6 py-8 pl-12">
+     <div class="text-2xl cursor-pointer object-right" onclick="toggleNav()">
+        <i class="fas fa-times"></i>
+     </div>
+     <a href="index.html" class="text-md font-semibold hover:text-gray-300">Home</a>
+     <a href="landmark.html" class="text-md font-semibold hover:text-gray-300">Landmark</a>
+     <a href="About Us.html" class="text-md font-semibold hover:text-gray-300">About Us</a>
+  </div>
+</div>
+    
+    <div id="carouselExampleCaptions" class="relative font-sans" data-te-carousel-init data-te-ride="carousel">
+      <!-- Carousel indicators -->
+ 
+
+      <!-- Carousel items -->
+      <div class="relative w-screen h-screen overflow-hidden after:clear-both after:block after:content-[''] font-sans">
+          <!-- First item -->
+          <div class="relative float-left -mr-[100%] w-screen h-screen transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+            <img src="https://dupnica.info/wp-content/uploads/2021/05/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%82%D0%B0-%D1%87%D0%B0%D1%81%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0-%D0%BA%D1%83%D0%BB%D0%B0-%D0%B2-%D0%B3%D1%80%D0%B0%D0%B4-%D0%94%D1%83%D0%BF%D0%BD%D0%B8%D1%86%D0%B0-%D1%81%D0%BD%D0%B8%D0%BC%D0%BA%D0%B0-Dzhunev-photography.jpg" class="block w-full h-full object-cover opacity-65" alt="...">
+            <div class="absolute inset-0 flex justify-center items-center text-center text-white">
+                <div>
+                    <h1 class="text-5xl font-bold font-sans text-white p-10 ">Часовниковата кула в Дупница е един от символите на града.
+                    </h1>
+                    <p class="w-[1000px] mx-auto">
+                     
+                        Построена е като бейска бойна кула с четири мазгала (бойници) за отбрана. Приспособена е за часовникова към последното десетилетие на XVIII век. Тогава е наричана сааткула.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div class="relative w-screen h-screen overflow-hidden after:clear-both after:block after:content-[''] font-sans">
+            <!-- First item -->
+            <div class="relative float-left -mr-[100%] w-screen h-screen transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+              <img src="https://dupnica.info/wp-content/uploads/2021/05/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%82%D0%B0-%D1%87%D0%B0%D1%81%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0-%D0%BA%D1%83%D0%BB%D0%B0-%D0%B2-%D0%B3%D1%80%D0%B0%D0%B4-%D0%94%D1%83%D0%BF%D0%BD%D0%B8%D1%86%D0%B0-%D1%81%D0%BD%D0%B8%D0%BC%D0%BA%D0%B0-Dzhunev-photography.jpg" class="block w-full h-full object-cover opacity-65" alt="...">
+              <div class="absolute inset-0 flex justify-center items-center text-center text-white">
+                  <div>
+                      <h1 class="text-5xl font-bold font-sans text-white p-10 ">Часовниковата кула в Дупница е един от символите на града.
+                      </h1>
+                      <p class="w-[1000px] mx-auto">
+                       
+                        Предполага се, че е свързана с местния аянин Сюлейман Карагалията, който вероятно при някои от походите си открадва камбаната от църква в днешните сръбски земи. На нея е посочена година 1792 и е изработена за храма „Свети Димитър... из место Црепое“.[1]
+                    </p>
+                  </div>
+              </div>
+          </div>
+          <!-- First item -->
+          <div class="relative w-screen h-screen overflow-hidden after:clear-both after:block after:content-[''] font-sans">
+            <!-- First item -->
+            <div class="relative float-left -mr-[100%] w-screen h-screen transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none" data-te-carousel-active data-te-carousel-item style="backface-visibility: hidden">
+              <img src="https://dupnica.info/wp-content/uploads/2021/05/%D0%A1%D1%82%D0%B0%D1%80%D0%B0%D1%82%D0%B0-%D1%87%D0%B0%D1%81%D0%BE%D0%B2%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0-%D0%BA%D1%83%D0%BB%D0%B0-%D0%B2-%D0%B3%D1%80%D0%B0%D0%B4-%D0%94%D1%83%D0%BF%D0%BD%D0%B8%D1%86%D0%B0-%D1%81%D0%BD%D0%B8%D0%BC%D0%BA%D0%B0-Dzhunev-photography.jpg" class="block w-full h-full object-cover opacity-65" alt="...">
+              <div class="absolute inset-0 flex justify-center items-center text-center text-white">
+                  <div>
+                      <h1 class="text-5xl font-bold font-sans text-white p-10 ">Часовниковата кула в Дупница е един от символите на града.
+                      </h1>
+                      <p class="w-[1000px] mx-auto">
+                       
+                        Разположена е в парк „Градска градина“, в близост до центъра на град Дупница. Кулата е с трапецовидна форма с дължина на страната от 5,5 m и височина от 17,2 m. Часовниковият механизъм на кулата вероятно е изработен от български майстори и се състои от четири циферблата, но поради лошата поддръжка спира да работи през 1939 година. Кулата и часовникът са реставрирани през 1979 година по случай 1300 години от основаването на Българската държава.
+                    </p>
+                  </div>
+              </div>
+          </div>
+          
+
+
+      <!-- Carousel controls - prev item -->
+      <button class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none" type="button" data-te-target="#carouselExampleCaptions" data-te-slide="prev">
+          <span class="inline-block h-8 w-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+          </span>
+          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Previous</span>
+      </button>
+      <!-- Carousel controls - next item -->
+      <button class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none" type="button" data-te-target="#carouselExampleCaptions" data-te-slide="next">
+          <span class="inline-block h-8 w-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+          </span>
+          <span class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]">Next</span>
+      </button>
+  </div>
+
+
+
+
+
+
+
+  <footer class=" shadow bg-[#121212] inset-x-0 bottom-0 p-4 mx-auto">
+    <div class="w-full max-w-screen-xl">
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <a href="index.html" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
+                <img src="https://media.discordapp.net/attachments/1180539305693810698/1198404568812376064/image.png?ex=65bec83a&is=65ac533a&hm=885d95b294a0848a8e5d3ffe4fe8d4587763eaa8dc08f88fe6e0f6befc6a99f8&=&format=webp&quality=lossless" class="h-8" alt="Bulgaria Logo" />
+            </a>
+            <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+                <li>
+                    <a href="About Us.html" class="hover:underline me-4 md:me-6">About</a>
+                </li>
+                <li>
+                    <a href="landmark.html" class="hover:underline me-4 md:me-6">Landmarks</a>
+                </li>
+                <li>
+                    <a href="index.html" class="hover:underline me-4 md:me-6">Home</a>
+                </li>
+       
+            </ul>
+        </div>
+        <hr class="my-6 sm:mx-auto dark:border-gray-900 lg:my-8" />
+        <span class="block text-sm text-gray-500 sm:text-center">Wsg My Homies</span>
+    </div>
+</footer>
+
+    
+    <script>
+      // Toggle navigation
+  // Toggle navigation
+  function toggleNav() {
+    var navbar = document.getElementById('navbar');
+    navbar.classList.toggle('open');
+  }
+  
+  function initCarousel() {
+    const carousel = document.getElementById('carouselExampleCaptions');
+    const carouselItems = carousel.querySelectorAll('[data-te-carousel-item]');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      carouselItems.forEach((item, i) => {
+        item.style.transform = `translateX(${(i - index) * 100}%)`;
+      });
+    }
+
+    function nextSlide() {
+      currentIndex++;
+      if (currentIndex >= carouselItems.length) {
+        currentIndex = 0;
+      }
+      showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+      currentIndex--;
+      if (currentIndex < 0) {
+        currentIndex = carouselItems.length - 1;
+      }
+      showSlide(currentIndex);
+    }
+
+    // Add event listeners to navigation buttons
+    const prevButton = carousel.querySelector('[data-te-slide="prev"]');
+    const nextButton = carousel.querySelector('[data-te-slide="next"]');
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Show initial slide
+    showSlide(currentIndex);
+  }
+
+  // Initialize the carousel when the DOM is ready
+  document.addEventListener('DOMContentLoaded', initCarousel);
+    </script>
+  </body>
+</html>

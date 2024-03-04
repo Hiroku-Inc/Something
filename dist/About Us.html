@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/dist/output.css" rel="stylesheet">
+  <link href="/dist/other.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>About Me</title>
+  <style>
+    body {
+      font-family: 'Poppins', serif;
+    }
+    /* Custom styles for navbar animation */
+    .nav-container {
+      transition: transform 0.3s ease-in-out;
+      transform: translateY(-100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.85);
+      width: 100%;
+      z-index: 10;
+    }
+    .nav-container.open {
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-[#181818] text-white">
+    <nav
+    class="z-10 fixed top-0 flex-no-wrap flex w-full items-center justify-between bg-transparent py-2 shadow-mdlg:flex-wrap lg:justify-start lg:py-4">
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+       <!-- Hamburger button for mobile view -->
+       <button
+          class="block border-0 bg-transparent px-2 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+          type="button" data-te-collapse-init data-te-target="#navbarSupportedContent1"
+          aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+          <!-- Hamburger icon -->
+          <span class="[&>svg]:w-7">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-7 w-7">
+                <path fill-rule="evenodd"
+                   d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                   clip-rule="evenodd" />
+             </svg>
+          </span>
+       </button>
+       <!-- Collapsible navigation container -->
+       <div class="!visible hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+          id="navbarSupportedContent1" data-te-collapse-item>
+          <!-- Logo -->
+          <a class="mb-4 ml-2 mr-5 mt-3 flex items-center text-neutral-900 hover:text-neutral-900 focus:text-neutral-900 dark:text-neutral-200 dark:hover:text-neutral-400 dark:focus:text-neutral-400 lg:mb-0 lg:mt-0"
+             href="#">
+             <div class="pl-8 pt-8 w-1/2 font-bold uppercase">
+                <img alt="Hello" class="object-cover h-full w-full" src="https://i.postimg.cc/44c1LdMD/image.png" />
+             </div>
+          </a>
+
+       </div>
+       <!-- Right elements -->
+       <div class="relative flex items-center">
+
+          <a class="mr-4 text-neutral-600 transition duration-200 hover:text-neutral-700 hover:ease-in-out focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 [&.active]:text-black/90 dark:[&.active]:text-neutral-400"
+             href="#">
+             <div class="object-right-top ml-auto float-right" onclick="toggleNav()">
+                <i class="fas fa-bars"></i>
+             </div>
+          </a>
+
+        
+       </div>
+    </div>
+ </nav>
+  <div class="z-10 fixed nav-container top-0 bg-[#121212]" id="navbar">
+    <div class="flex flex-col items-start justify-start space-y-6 py-8 pl-12">
+        <div class="text-2xl cursor-pointer object-right" onclick="toggleNav()">
+           <i class="fas fa-times"></i>
+        </div>
+        <a href="index.html" class="text-md font-semibold hover:text-gray-300">Home</a>
+        <a href="landmark.html" class="text-md font-semibold hover:text-gray-300" >Landmark</a>
+        <a href="About Us.html" class="text-md font-semibold hover:text-gray-300">About Us</a>
+     </div>  
+    </div>
+  <div class="container mx-auto mt-20 flex flex-wrap">
+    <div class="w-full lg:w-1/2 lg:pr-10">
+      <img src="https://via.placeholder.com/400" alt="About Me Image" class="w-full h-auto">
+    </div>
+    <div class="w-full lg:w-1/2 mt-6 lg:mt-0 lg:pl-10">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-lg leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempor magna vel urna dictum, eu gravida est tempus. Nullam nec lacus justo. Vivamus id volutpat nisi. Aliquam vitae ante id arcu efficitur vehicula. Vestibulum ultricies malesuada felis, in aliquet arcu malesuada sed. Donec dignissim elit vitae nulla euismod, vel lacinia odio malesuada. Integer a neque quis turpis interdum finibus. Cras at mi neque. Donec pharetra lorem at mi mattis, ut faucibus velit pellentesque. Ut fringilla metus at sapien tempor, nec ullamcorper justo convallis.
+      </p>
+    </div>
+  </div>
+  <div class="container mx-auto mt-10">
+    <h2 class="text-3xl font-bold mb-4">Contact Information</h2>
+    <p class="text-lg">
+      Email: example@example.com<br>
+      Phone: +1234567890<br>
+      Address: 123 Main Street, City, Country<br>
+    </p>
+  </div>
+  <footer class="shadow bg-[#121212] inset-x-0 bottom-0 p-4 mx-auto">
+    <!-- Footer content here (unchanged) -->
+  </footer>
+  <script>
+       // Toggle navigation
+       function toggleNav() {
+             var navbar = document.getElementById('navbar');
+             navbar.classList.toggle('open');
+         }  </script>
+</body>
+</html>
